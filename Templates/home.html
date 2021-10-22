@@ -1,0 +1,37 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div id="hero">
+        <div class="hero-lead-sec">Create fast and short Urls,</div>
+        <div class="hero-lead-pri">Within <span>Seconds!</span></div>
+        <div class="hero-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Cupiditate natus voluptates temporibus. Tempore est nihil, 
+            praesentium expedita quisquam omnis, maxime error quia ex, aliquam eum?
+        </div>
+
+        
+        {% if copy %}
+            <div class="hero-form">
+                <div class="form-input" id="target">{{copy}}</div>
+                <button onclick="copyToClipboard()" class="form-btn" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    </svg>
+                </button>
+            </div>
+        {% else %}
+            <form method="POST" class="hero-form">
+                {% csrf_token %}
+                <input name="url" type="text" placeholder="Create Short Url..." required autocomplete="off" class="form-input">
+                <button type="submit" class="form-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                    </svg>
+                </button>
+            </form>
+        {% endif %}
+            
+    </div>
+{% endblock content %}

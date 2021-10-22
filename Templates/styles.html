@@ -1,0 +1,256 @@
+<style>
+    /* ---------------------------- Global-Styles ---------------------------- */
+    *{
+        text-decoration: none !important;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background-color: white;
+        color: #000213;
+    }
+
+    main{
+        margin-top: 10px;
+    }
+
+    a{
+        transition: 0.2s ease-in-out;
+        color: #5d5deb;
+    }
+
+    a:hover{
+        color: #3e3ef8;
+    }
+
+    /* ---------------------------- Theme-Styles ---------------------------- */
+
+    .dark-mode {
+      background-color: #000213;
+      color: white;
+    }
+
+    .mode-light{
+        display: block;
+    }
+
+    .mode-dark{
+        display: none;
+    }
+
+    body.dark-mode > header > nav > .nav-meta > .mode-light{
+        display: none;
+    }
+
+    body.dark-mode > header > nav > .nav-meta > .mode-dark{
+        display: block;
+    }
+
+    body.dark-mode > header{
+        border-bottom: 0.5px solid #262626;
+    }
+
+    body.dark-mode > footer{
+        border-top: 0.5px solid #262626;
+    }
+
+    body.dark-mode > .container > #hero > .hero-body{
+        color: #aaa;
+    }
+
+    body.dark-mode > .container > #hero > .hero-form{
+        background: #161629;
+    }
+
+    body.dark-mode > .container > #hero > .hero-form > .form-input{
+        color: #fff;
+    }
+    /* ---------------------------- Navigation-Styles ---------------------------- */
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 0.5px solid #eee;
+        height: 70px;
+        overflow: hidden;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 15px;
+    }
+
+    .nav-logo{
+        font-size: 24px;
+        color: #5d5deb;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .nav-meta{
+        cursor: pointer;
+    }
+
+    /* ---------------------------- Content-Styles ---------------------------- */
+    #hero{
+        min-height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-lead-sec{
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .hero-lead-pri{
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 48px;
+        text-align: center;
+    }
+
+    .hero-lead-pri span{
+        color: #5d5deb;
+    }
+
+    .hero-body{
+        max-width: 500px;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+        color: #454545;
+        margin-top: 20px;
+    }
+
+    .hero-form{
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        background: #f1f1f7;
+        border-radius: 15px;
+        overflow: hidden;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .form-input{
+        background: transparent;
+        border: none !important;
+        outline: none !important;
+        padding: 12px 20px;
+        flex: 1;
+    }
+
+    .form-btn{
+        padding: 12px 30px;
+        border: none !important;
+        outline: none !important;
+        background: #5d5deb;
+        color: #FFF;
+        transition: 0.2s ease-in-out;
+    }
+
+    .form-btn:hover{
+        background: #4848f0;
+    }
+
+    @media only screen and (max-width: 425px){
+	    
+        .hero-lead-sec{
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .hero-lead-pri{
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 42px;
+            text-align: center;
+        }
+    }
+
+    @media only screen and (max-width: 350px){
+
+        .form-input{
+            padding: 8px 20px;
+            flex: none;
+        }
+
+        .form-btn{
+            padding: 8px 20px;
+            font-size: 14px;
+        }
+    }
+
+
+    /* ---------------------------- Footer-Styles ---------------------------- */
+
+    footer{
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 0.5px solid #eee;
+        overflow: hidden;
+    }
+
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 15px;
+    }
+
+    .footer-about{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .social{
+        display: flex;
+        align-items: center;
+    }
+
+    .social-link{
+        padding: 10px;
+    }
+
+    .social-link:hover{
+        transform: translateY(-4px);
+    }
+
+    .footer-copyrights{
+        color: #666666;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    @media only screen and (max-width: 625px){    
+        footer{
+            height: 150px;
+        }
+
+        .footer-about{
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-link:hover{
+            transform: translateY(0);
+        }
+    }
+</style>

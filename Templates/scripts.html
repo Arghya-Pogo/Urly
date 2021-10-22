@@ -1,0 +1,22 @@
+<script>
+    function ToggleTheme() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+
+    function copyToClipboard() {
+        var range = document.createRange();
+        range.selectNode(document.getElementById("target"));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+        document.getElementById("message-box").innerHTML = `
+            <div class="alert mt-2 alert-primary">
+                Link copied to clipboard!
+            </div>
+        `;
+        window.getSelection().removeAllRanges();
+    }
+
+    //    http://127.0.0.1:8000/link/38
+</script>
